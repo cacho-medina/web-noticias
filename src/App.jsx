@@ -8,9 +8,9 @@ function App() {
             <h1 className="m-0 bg-primary display-1 text-center fw-medium py-2">
                 Noticias
             </h1>
-            <div className="bg-secondary py-4">
+            <section className="bg-secondary">
                 <Formulario />
-            </div>
+            </section>
         </Container>
     );
 }

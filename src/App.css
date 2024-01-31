@@ -4,8 +4,23 @@
     padding: 2rem;
     text-align: center; */
     min-height: 100vh;
+    background-color: #212529;
 }
 
+.smaller {
+    font-size: 0.8rem;
+}
+.altura {
+    max-height: 500px;
+}
+
+.description {
+    overflow: hidden;
+    font-size: small;
+}
+.max {
+    height: 100%;
+}
 .logo {
     height: 6em;
     padding: 1.5em;
