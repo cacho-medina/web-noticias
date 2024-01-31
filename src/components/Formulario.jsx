@@ -35,7 +35,7 @@ function Formulario() {
     return (
         <>
             <Form
-                className="d-flex flex-column align-items-center px-2 py-4 gap-2"
+                className="d-flex flex-column align-items-center px-2 py-4 gap-2 medium"
                 onSubmit={handleSubmit}
             >
                 <Form.Label>Buscar por categoria:</Form.Label>
