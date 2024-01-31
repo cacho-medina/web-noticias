@@ -16,7 +16,7 @@ function Noticia({ noticia }) {
                 style={{ maxHeight: "30%" }}
                 className="img-fluid object-fit-fill"
             />
-            <Card.Body className="px- d-flex flex-column justify-content-between">
+            <Card.Body className="px-2 d-flex flex-column justify-content-between">
                 <p className="m-0 fst-italic smaller">
                     <Badge>{noticia.source_id}</Badge>
                 </p>

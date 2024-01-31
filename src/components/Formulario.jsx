@@ -14,7 +14,6 @@ function Formulario() {
         fetch(`${url}&category=${categoria}`)
             .then((res) => res.json())
             .then((data) => {
-                console.log(data.results);
                 setNoticias(data.results);
             })
             .catch((err) => console.log("sucedio un error", err));
@@ -22,7 +21,6 @@ function Formulario() {
 
     function handleSelect(e) {
         setCategoria(e.target.value);
-        console.log(e.target.value);
     }
 
     function handleSubmit(e) {
@@ -58,7 +56,7 @@ function Formulario() {
                     buscar
                 </button>
             </Form>
-            <ListaNoticias noticias={noticias} />
+            <ListaNoticias noticias={noticias} categoria={categoria}/>
         </>
     );
 }
