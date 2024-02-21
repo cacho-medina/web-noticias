@@ -4,6 +4,7 @@ import Card from "react-bootstrap/Card";
 import Badge from "react-bootstrap/Badge";
 
 function Noticia({ noticia }) {
+    console.log(noticia);
     return (
         <Card
             className="bg-dark text-light p-0 text-center"
@@ -17,14 +18,28 @@ function Noticia({ noticia }) {
                 className="img-fluid object-fit-fill"
             />
             <Card.Body className="px-2 d-flex flex-column justify-content-between">
-                <p className="m-0 fst-italic smaller">
-                    <Badge>{noticia.source_id}</Badge>
+                <p>
+                    <Badge bg="primary">
+                        <a
+                            className="m-0 fst-italic smaller text-light"
+                            href={noticia.source_url}
+                            target="_blank"
+                        >
+                            {noticia.source_id}
+                        </a>
+                    </Badge>
                 </p>
                 <Card.Title>{noticia.title}</Card.Title>
                 <Card.Text className="description">
                     {noticia.description?.slice(0, 200)}
                 </Card.Text>
-                <Button variant="primary">Ver noticia completa</Button>
+                <a
+                    className="btn btn-primary"
+                    href={noticia.link}
+                    target="_blank"
+                >
+                    Ver noticia completa
+                </a>
             </Card.Body>
         </Card>
     );
